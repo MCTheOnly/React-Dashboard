@@ -1,7 +1,7 @@
 const Header = () => {
 	return (
 		<header className="header__wraper">
-			<h2>Site Logo</h2>
+			<h1>Site Logo</h1>
 			<nav className="header__nav">
 				<a href="/">Home</a>
 				<a href="/" style=

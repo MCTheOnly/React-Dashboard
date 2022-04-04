@@ -1,30 +1,31 @@
 import { useState, useEffect } from 'react'
-import PizzasList from './PizzasList';
+import PizzasList from './PizzasList'
 
 const Home = () => {
+
 	const [pizzas, setPizzas] = useState([
-		{ name: 'margherita', ingredients: ['tomato base, ', 'chees '], vegan: true, id: 1 },
-		{ name: 'capriciosa', ingredients: ['tomato base, ', 'chees, ', 'ham '], vegan: false, id: 2 }
+		{ name: 'Margheritta', ingredients: ['tomato base, ', 'cheese '], vegan: true, id: 1 },
+		{ name: 'Capriciosa', ingredients: ['tomato base, ', 'cheese, ', 'ham '], vegan: false, id: 2 }
 	])
 
-	const choosePizza = (id) => {
-		const choosePizza = pizzas.filter(pizza => pizza.id === id)
-		setPizzas(choosePizza)
-	}
-
 	const [client, setClient] = useState('Bob')
+
+	const selectPizza = (id) => {
+		const selectedPizza = pizzas.filter(pizza => pizza.id === id)
+		setPizzas(selectedPizza)
+	}
 
 	useEffect(() => {
 		console.log('Effect Used')
 	}, [client])
 
-
 	return (
 		<div className="home">
-			<PizzasList pizzas={pizzas} title="Pizzas List" choosePizza={choosePizza} />
-			{/* <PizzasList pizzas={pizzas.filter((blog) => blog.vegan === true)} title="Vegan Pizzas" choosePizza={choosePizza} /> */}
+			<PizzasList pizzas={pizzas} title="Pizzas List" selectPizza={selectPizza} />
+			{/* <PizzasList pizzas={pizzas.filter((pizza) => pizza.vegan === true)} title="Vegan Pizzas" /> */}
 			<p>{client}</p>
-			<button className="changeClient" onClick={() => setClient('Mark')}>Change Client</button>
+			<button className="changeClient" onClickCapture={() => setClient('Marek')}>Change Client</button>
+
 		</div>
 	);
 }

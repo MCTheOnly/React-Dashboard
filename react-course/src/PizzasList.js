@@ -1,20 +1,22 @@
-const PizzasList = (props) => {
-	const pizzas = props.pizzas
-	const title = props.title
-	const choosePizza = props.choosePizza
+const PizzasList = ({ pizzas, title, selectPizza }) => {
 
-	console.log(props)
+	// const pizzas = props.pizzas
+	// const title = props.title
+
+	// console.log(props)
 
 	return (
-		<div className="pizza-list">
+		<div className="pizzas-lis">
 			<h2>{title}</h2>
-			{pizzas.map((pizza) => (
-				<div className="single-pizza" key={pizza.id}>
-					<h2>{pizza.name}</h2>
-					<p className="ingredients">{pizza.ingredients}</p>
-					<button className="choosPizza" onClick={() => choosePizza(pizza.id)}>Select</button>
-				</div>
-			))}
+			{
+				pizzas.map((pizza) => (
+					<div className="single-pizza" key={pizza.id}>
+						<h2>{pizza.name}</h2>
+						<p className="ingredients">{pizza.ingredients}</p>
+						<button className="selectPizza" onClick={() => selectPizza(pizza.id)}>Select</button>
+					</div>
+				))
+			}
 		</div>
 	);
 }
