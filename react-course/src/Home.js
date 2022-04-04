@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import PizzasList from './PizzasList';
 
 const Home = () => {
@@ -12,10 +12,19 @@ const Home = () => {
 		setPizzas(choosePizza)
 	}
 
+	const [client, setClient] = useState('Bob')
+
+	useEffect(() => {
+		console.log('Effect Used')
+	}, [client])
+
+
 	return (
 		<div className="home">
 			<PizzasList pizzas={pizzas} title="Pizzas List" choosePizza={choosePizza} />
 			{/* <PizzasList pizzas={pizzas.filter((blog) => blog.vegan === true)} title="Vegan Pizzas" choosePizza={choosePizza} /> */}
+			<p>{client}</p>
+			<button className="changeClient" onClick={() => setClient('Mark')}>Change Client</button>
 		</div>
 	);
 }
