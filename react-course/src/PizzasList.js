@@ -6,7 +6,7 @@ const PizzasList = ({ pizzas, title, selectPizza }) => {
 	// console.log(props)
 
 	return (
-		<div className="pizzas-lis">
+		<div className="pizzas-list">
 			<h2>{title}</h2>
 			{
 				pizzas.map((pizza) => (

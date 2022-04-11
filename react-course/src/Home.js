@@ -3,10 +3,11 @@ import PizzasList from './PizzasList'
 
 const Home = () => {
 
-	const [pizzas, setPizzas] = useState([
-		{ name: 'Margheritta', ingredients: ['tomato base, ', 'cheese '], vegan: true, id: 1 },
-		{ name: 'Capriciosa', ingredients: ['tomato base, ', 'cheese, ', 'ham '], vegan: false, id: 2 }
-	])
+	const [pizzas, setPizzas] = useState(null)
+	// [
+	// 	{ name: 'Margheritta', ingredients: ['tomato base, ', 'cheese '], vegan: true, id: 1 },
+	// 	{ name: 'Capriciosa', ingredients: ['tomato base, ', 'cheese, ', 'ham '], vegan: false, id: 2 }
+	// ])
 
 	const [client, setClient] = useState('Bob')
 

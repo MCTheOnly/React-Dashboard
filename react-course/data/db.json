@@ -1,0 +1,23 @@
+{
+	"pizzas": [
+		{
+			"name": "Margheritta",
+			"ingredients": [
+				"tomato base, ",
+				"cheese "
+			],
+			"vegan": true,
+			"id": 1
+		},
+		{
+			"name": "Capriciosa",
+			"ingredients": [
+				"tomato base, ",
+				"cheese, ",
+				"ham "
+			],
+			"vegan": false,
+			"id": 2
+		}
+	]
+}
