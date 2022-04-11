@@ -1,4 +1,4 @@
-const PizzasList = ({ pizzas, title, selectPizza }) => {
+const PizzasList = ({ pizzas, title }) => {
 
 	// const pizzas = props.pizzas
 	// const title = props.title
@@ -13,7 +13,7 @@ const PizzasList = ({ pizzas, title, selectPizza }) => {
 					<div className="single-pizza" key={pizza.id}>
 						<h2>{pizza.name}</h2>
 						<p className="ingredients">{pizza.ingredients}</p>
-						<button className="selectPizza" onClick={() => selectPizza(pizza.id)}>Select</button>
+						{/* <button className="selectPizza" onClick={() => selectPizza(pizza.id)}>Select</button> */}
 					</div>
 				))
 			}
