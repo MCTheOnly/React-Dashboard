@@ -2,7 +2,7 @@
 	height: 100%;
 }*/
 
-.main-wrapper {
+.main__wrapper {
 	display: flex;
 	flex-direction: column;
 	/* position: relative; */
@@ -38,6 +38,7 @@
 	justify-content: flex-end;
 	padding-top: 10px;
 	padding-right: 10px;
+	margin-bottom: 10px;
 }
 
 .navbar__wrapper svg {
@@ -141,4 +142,18 @@
 .sidebar__links--wrapper svg {
 	font-size: 24px;
 	margin-right: 10px;
+}
+
+.ecommerce {
+	transition: 0.4s;
+	padding-left: 0;
+}
+
+.ecommerce.retracted {
+	padding-left: 250px;
+}
+
+.ecommerce__wrapper {
+	background-color: green;
+	padding: 10px;
 }

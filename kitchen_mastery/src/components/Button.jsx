@@ -1,6 +1,10 @@
-const Button = () => {
+const Button = ({ bgColor, color, text, size, borderRadius }) => {
 	return (
-		<div></div>
+		<button
+			type="button"
+			style={{ backgroundColor: bgColor, color, borderRadius }}>
+			Elo
+		</button>
 	);
 }
 

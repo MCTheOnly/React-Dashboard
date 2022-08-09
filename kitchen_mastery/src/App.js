@@ -17,7 +17,7 @@ const App = () => {
 	return (
 		<div className="App">
 			<BrowserRouter>
-				<div className="main-wrapper">
+				<div className="main__wrapper">
 
 					<div className="navbar__wrapper">
 						<div className="navbar__content">
